@@ -36,18 +36,13 @@ end
 
 def total_gross(source)
   total = 0
-  
-  
-  
-  # Write this implementation
-  #
-  # Should use methods:
-  # 1. directors_totals: returns a Hash of { dir_name => gross }
-  # 2. list_of_directors: names provides an Array of directors names (use
-  #
-  # Visit each key (i.e. director name), look up the value in the hash
-  # returned by directors_totals, and add it to a running total. When done,
-  # return the total
+  index = 0
+  list = list_of_directors(source)
+  gross_per_director = directors_totals(source)
+  while index < list.length
+    total += gross_per_director[list[index]]
+  end
+  total
 end
 
 
