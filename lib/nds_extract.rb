@@ -27,7 +27,7 @@ end
 def list_of_directors(source)
   index = 0
   while index < source.length
-    puts source[index][:name]x
+    puts source[index][:name]
   end
 end
 
